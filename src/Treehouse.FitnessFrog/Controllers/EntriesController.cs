@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using Treehouse.FitnessFrog.Data;
@@ -43,7 +45,8 @@ namespace Treehouse.FitnessFrog.Controllers
         {
             var entry = new Entry()
             {
-                Date = DateTime.Today,
+         
+            Date = DateTime.Today,
                
         };
             ViewBag.ActivitiesSelectListItems = new SelectList(Data.Data.Activities, "Id", "Name");
